@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript Practice</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 20px auto; padding: 0 16px; }
+  section { border: 1px solid #ccc; border-radius: 8px; padding: 12px 16px; margin: 16px 0; }
+  button { padding: 6px 14px; margin: 3px; cursor: pointer; }
+  input[type=text] { padding: 6px; margin: 3px; }
+  #randomResult { font-size: 40px; font-weight: bold; }
+  .light { width: 60px; height: 60px; border-radius: 50%; margin: 8px 0; opacity: 0.2; border: 2px solid #333; }
+  .light.on { opacity: 1; box-shadow: 0 0 18px 4px currentColor; }
+  #lightRed { background: red; color: red; }
+  #lightYellow { background: gold; color: gold; }
+  #lightGreen { background: limegreen; color: limegreen; }
+  #trafficText { font-size: 22px; font-weight: bold; min-height: 28px; }
+  .book { border-bottom: 1px solid #ddd; padding: 6px 0; }
+  .unavailable { color: #a00; }
+  .available { color: #070; }
+</style>
+</head>
+<body>
+<h1>Практические задания</h1>
+<p>Задания 66–80: откройте Console (F12). Задания 81–85 работают прямо на этой странице.</p>
+
+<section>
+  <h2>Задание 81. Генератор случайных чисел</h2>
+  <div id="randomResult">—</div>
+  <button id="generateBtn">Сгенерировать</button>
+</section>
+
+<section>
+  <h2>Задание 82. Светофор с кнопками</h2>
+  <div class="light" id="lightRed"></div>
+  <div class="light" id="lightYellow"></div>
+  <div class="light" id="lightGreen"></div>
+  <div id="trafficText"></div>
+  <button id="redBtn">Красный</button>
+  <button id="yellowBtn">Жёлтый</button>
+  <button id="greenBtn">Зелёный</button>
+  <button id="autoBtn">Авто-режим: выкл</button>
+</section>
+
+<section>
+  <h2>Задание 83. Поиск студентов по имени</h2>
+  <input type="text" id="searchInput" placeholder="Введите имя">
+  <button id="searchBtn">Найти</button>
+  <p id="searchResult"></p>
+</section>
+
+<section>
+  <h2>Задание 84. Калькулятор стоимости компьютера</h2>
+  <label><input type="checkbox" class="part" data-price="85000"> Процессор — 85 000 ₸</label><br>
+  <label><input type="checkbox" class="part" data-price="35000"> Оперативная память — 35 000 ₸</label><br>
+  <label><input type="checkbox" class="part" data-price="28000"> SSD — 28 000 ₸</label><br>
+  <label><input type="checkbox" class="part" data-price="180000"> Видеокарта — 180 000 ₸</label><br>
+  <label><input type="checkbox" class="part" data-price="25000"> Корпус — 25 000 ₸</label><br>
+  <button id="pcBtn">Рассчитать стоимость</button>
+  <p id="pcResult"></p>
+</section>
+
+<section>
+  <h2>Задание 85. Электронная библиотека</h2>
+  <input type="text" id="bookSearch" placeholder="Поиск по названию">
+  <label><input type="checkbox" id="onlyAvailable"> Только доступные</label>
+  <div id="bookList"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
